@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muncher</title>
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+  <main id="cabinet">
+    <header>
+      <div class="stat">
+        <span>Score</span>
+        <strong id="score">0000</strong>
+      </div>
+      <div class="stat">
+        <span>Level</span>
+        <strong id="level">1</strong>
+      </div>
+      <div class="stat">
+        <span>Best</span>
+        <strong id="best">0000</strong>
+      </div>
+    </header>
+
+    <div id="stage">
+      <canvas id="board" width="456" height="576" aria-label="Muncher maze"></canvas>
+      <div id="overlay">
+        <p class="eyebrow">maze chase</p>
+        <h1 id="title">Muncher</h1>
+        <p id="blurb">Eat every pellet. Energizers turn the ghosts around.</p>
+        <button id="play" type="button">Play</button>
+      </div>
+    </div>
+
+    <footer>
+      <div id="lives" aria-label="Lives"></div>
+      <p class="keys">Arrows or WASD to turn · P pause · M mute</p>
+      <button id="mute" type="button" aria-pressed="false">Sound on</button>
+    </footer>
+
+    <div id="dpad">
+      <button type="button" data-dir="3" aria-label="Up">▲</button>
+      <button type="button" data-dir="2" aria-label="Left">◀</button>
+      <button type="button" data-dir="1" aria-label="Down">▼</button>
+      <button type="button" data-dir="0" aria-label="Right">▶</button>
+    </div>
+    <p id="status" class="sr" aria-live="polite"></p>
+  </main>
+  <script src="maze.js?v=4"></script>
+  <script src="game.js?v=4"></script>
+</body>
+</html>
